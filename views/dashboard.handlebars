@@ -1,18 +1,43 @@
-<!-- Loop over each object in the posts array -->
-{{#each posts as |post| }}
-<div class="row mb-4 post">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/post/{{post.id}}">{{post.name}}</a>
-    </h2>
-    <p>Created by {{post.user.name}} on {{format_date post.date}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{post.description}}
-    </p>
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome!</h2>
   </div>
 </div>
-{{/each}}
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Post:</h3>
+
+    <form class="form new-post-form">
+      <div class="form-group">
+        <input class="form-input" type="text" id="post-name" name="post-name" placeholder="Post Name" />
+      </div>
+      
+      <div class="form-group">
+        <textarea class="form-input" id="post-description" name="post-desc" placeholder="Post Content"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if posts.length}}
+  <div class="col-md-6 post-list">
+    <h3>Current Posts:</h3>
+
+    {{#each posts as |post|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger" post-id="{{post.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="/public/js/dashboard.js"></script>
