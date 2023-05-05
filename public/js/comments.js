@@ -1,18 +1,19 @@
-
- 
-const commentHandler = async function (event) {
+ const commentHandler = async function (event) {
 	event.preventDefault();
 
-	const postId = document.querySelector('.comment-form').post-id;
+	// const postId
+
+    // const userId
 
 	const commentText = document.querySelector('#comment-text').value.trim();
 
-	if (comment_description) {
+	if (commentText) {
 		await fetch('/api/comments', {
 			method: 'POST',
 			body: JSON.stringify({
-				post_id,
-				comment_text,
+                commentText,
+				postId,
+                userId,
 			}),
 			headers: {
 				'Content-Type': 'application/json'
