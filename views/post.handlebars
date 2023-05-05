@@ -15,10 +15,10 @@
 
 		{{#if logged_in}}
 
-		<form class="new-comment-form formCont d-flex flex-wrap justify-content-center" data-blogid={{id}}>
+		<form class="comment-form formCont d-flex flex-wrap justify-content-center" post-id={{id}}>
 			<div class="textAreaCont p-2">
-				<textarea id='comment_description' name="comment-body"
-				placeholder="Enter a comment here..."
+				<textarea id='comment-text' name="comment-body"
+				placeholder="Add comment here!"
 				cols="30"
 				rows="2"></textarea>
 			</div>
@@ -33,7 +33,7 @@
 		{{#each comments as |comment|}}
 		<div class="commentCont">
 			<p class="text-center commentText">{{comment.comment_text}}</p>
-			<p class="text-center commentOwner">{{comment.user.username}} {{format_date date_created}}</p>
+			<p class="text-center commentOwner">{{comment.user.name}} {{format_date date_created}}</p>
 		</div>
 		{{/each}}
 
