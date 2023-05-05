@@ -1,14 +1,14 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area."
+    "name": "MVC",
+    "description": "The Model-View-Controller (MVC) architecture is important for software development because it separates an application's data, user interface, and control logic into distinct components."
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
+    "name": "Sequelize",
+    "description": "Sequelize is a valuable tool for Node.js developers because it provides an Object-Relational Mapping (ORM) layer that abstracts away the need to write SQL queries."
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes."
+    "name": "How to Use Handlebars.js",
+    "description": "To use Handlebars.js, create a Handlebars template with placeholders for data, compile it into a JavaScript function, and use that function to render the data onto the HTML page."
   }
 ]

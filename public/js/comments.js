@@ -1,7 +1,7 @@
  const commentHandler = async function (event) {
 	event.preventDefault();
 
-	// const postId
+	const postId = document.querySelector('.comment-form').getAttribute('post-id');
 
     // const userId
 
@@ -13,7 +13,6 @@
 			body: JSON.stringify({
                 commentText,
 				postId,
-                userId,
 			}),
 			headers: {
 				'Content-Type': 'application/json'
