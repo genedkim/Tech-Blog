@@ -8,16 +8,16 @@
 	const commentText = document.querySelector('#comment-text').value.trim();
 
 	if (commentText) {
-		await fetch('/api/comments', {
-			method: 'POST',
-			body: JSON.stringify({
-                commentText,
-				postId,
-			}),
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		});
+        await fetch('/api/comments', {
+            method: 'POST',
+            body: JSON.stringify({
+              comment_text: commentText,
+              post_id: postId,
+            }),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+        });
 		document.location.reload();
 	}
 };
